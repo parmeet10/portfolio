@@ -9,6 +9,7 @@ import Education from '@/components/Education'
 import Blogs from '@/components/Blogs'
 import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
+import BookMeetingButton from '@/components/BookMeetingButton'
 
 export default function Home() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -160,6 +161,7 @@ export default function Home() {
       <Education />
       <Blogs />
       <Footer />
+      <BookMeetingButton />
     </main>
   )
 }
