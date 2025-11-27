@@ -1,7 +1,7 @@
 'use client'
 
 import { motion } from 'framer-motion'
-import { Github, Linkedin, Mail, Download } from 'lucide-react'
+import { Github, Linkedin, Mail, Download, Eye } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import PhoneNumber from './PhoneNumber'
 
@@ -9,6 +9,7 @@ export default function Hero() {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
   const [dimensions, setDimensions] = useState({ width: 1920, height: 1080 })
   const [currentEmojiIndex, setCurrentEmojiIndex] = useState(0)
+  const [visitCount, setVisitCount] = useState<number | null>(null)
   const [personalInfo, setPersonalInfo] = useState({
     name: 'Parmeet Singh',
     title: 'Software Development Engineer',
@@ -57,6 +58,34 @@ export default function Hero() {
       .catch(err => console.error('Error fetching personal info:', err))
   }, [])
 
+  useEffect(() => {
+    // Track visit only once per session to avoid counting refreshes
+    const hasVisited = sessionStorage.getItem('hasVisited')
+    
+    if (!hasVisited) {
+      // Increment count for new session
+      fetch('/api/visits', { method: 'POST' })
+        .then(res => res.json())
+        .then(data => {
+          if (data.count !== undefined) {
+            setVisitCount(data.count)
+          }
+          sessionStorage.setItem('hasVisited', 'true')
+        })
+        .catch(err => console.error('Error tracking visit:', err))
+    } else {
+      // Just fetch current count without incrementing
+      fetch('/api/visits')
+        .then(res => res.json())
+        .then(data => {
+          if (data.count !== undefined) {
+            setVisitCount(data.count)
+          }
+        })
+        .catch(err => console.error('Error fetching visit count:', err))
+    }
+  }, [])
+
   const containerVariants = {
     hidden: { opacity: 0 },
     visible: {
@@ -80,6 +109,24 @@ export default function Hero() {
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 pt-20">
+      {/* Visitor Count Badge */}
+      {visitCount !== null && (
+        <motion.div
+          initial={{ opacity: 0, scale: 0.8, y: -20 }}
+          animate={{ opacity: 1, scale: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.8 }}
+          className="fixed top-24 right-4 sm:right-6 lg:right-8 z-50"
+        >
+          <div className="glass rounded-full px-4 py-2 flex items-center gap-2 backdrop-blur-sm border border-white/10 shadow-lg glow-effect">
+            <Eye size={16} className="text-indigo-400" />
+            <span className="text-sm font-medium text-gray-300">
+              <span className="text-indigo-400 font-semibold">{visitCount.toLocaleString()}</span>
+              {' '}visitors
+            </span>
+          </div>
+        </motion.div>
+      )}
+      
       <div className="max-w-7xl mx-auto w-full">
         <motion.div
           variants={containerVariants}
