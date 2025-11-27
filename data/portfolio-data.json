@@ -1,0 +1,160 @@
+{
+  "personalInfo": {
+    "name": "Parmeet Singh",
+    "title": "Software Development Engineer",
+    "description": "3+ years of experience building scalable applications and innovative solutions",
+    "email": "sparmeet162000@gmail.com",
+    "phone": ["+91 8450910113","+49  15755866330"],
+    "github": "https://github.com/parmeet10",
+    "linkedin": "https://linkedin.com/in/parmeet10"
+  },
+  "experiences": [
+    {
+      "id": "1",
+      "company": "Jio",
+      "position": "Software Development Engineer - II",
+      "location": "Mumbai, Maharashtra",
+      "period": "Apr 2025 - Oct 2025",
+      "description": [
+        "Contributing to the development of Jio Frames, a next-gen mixed-reality wearable product similar to Apple Vision Pro, focused on immersive spatial computing experiences.",
+        "Building real-time speech-to-text (STT) and text-to-speech (TTS) pipelines to enable voice interaction in XR environments.",
+        "Setting up backend infrastructure using Node.js, gRPC, and WebSockets for low-latency, real-time audio communication.",
+        "Collaborating with AI and hardware teams to integrate voice-driven features into augmented reality use cases."
+      ],
+      "color": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "2",
+      "company": "WeDevx.co",
+      "position": "Software Development Engineer",
+      "location": "Bishkek, Kyrgyzstan",
+      "period": "Mar 2023 - Aug 2024",
+      "description": [
+        "Implemented health checks and monitoring systems, resulting in a 99.9% increase in up-time.",
+        "Implemented tools such as Husky and established CI/CD processes to streamline pull request reviews and minimize manual effort.",
+        "Engineered a subscription management system with Stripe, automating payment processing, subscription renewals, and cancellations, leading to increased revenue and enhanced user satisfaction.",
+        "Deployed code execution engines on servers instead of relying on a managed service, reducing operational costs to zero while ensuring high availability and seamless functionality.",
+        "Developed a custom rate-limiting and bot detection algorithm to block spam signups and mitigate botnet attacks without using paid services, ensuring platform security and performance."
+      ],
+      "color": "from-purple-500 to-pink-500"
+    },
+    {
+      "id": "3",
+      "company": "Xane.ai",
+      "position": "Backend Developer",
+      "location": "Haryana, Gurugram",
+      "period": "Jun 2022 - Feb 2023",
+      "description": [
+        "Developed application programming interfaces for seamless communication with and storage of predictions from machine learning servers.",
+        "Architected and optimized databases to store and process data from OMNX servers, enabling asynchronous handling of large number of files and reducing latency.",
+        "Generation of comma-separated files from multiple records to enhance user experience and solved complex technical challenges to create a robust and fault-tolerant back-end infrastructure."
+      ],
+      "color": "from-green-500 to-emerald-500"
+    }
+  ],
+  "projects": [
+    {
+      "id": "1",
+      "title": "Curl-Logger",
+      "type": "NPM Package",
+      "description": "A npm package to log curl-request on the console",
+      "features": [
+        "Middleware for every request to log all the request metadata",
+        "Ability to write Comma separated files on the server that would be appended to every request in order to have a complete list of curl requests to avoid hassle",
+        "Reduced debugging time for API-related issues by creating a developer-friendly solution to trace HTTP requests with minimal overhead"
+      ],
+      "technologies": ["Express", "Node.js"],
+      "link": "https://www.npmjs.com/package/curl-logger",
+      "color": "from-yellow-500 to-orange-500"
+    }
+  ],
+  "skills": {
+    "languages": {
+      "title": "Languages",
+      "skills": ["JavaScript", "TypeScript", "C/C++", "Python"],
+      "color": "from-blue-500 to-cyan-500"
+    },
+    "technologies": {
+      "title": "Technologies",
+      "skills": [
+        "Node.js",
+        "Linux",
+        "ReactJs",
+        "Redux",
+        "Socket.io",
+        "Sequelize",
+        "Mongoose",
+        "MySQL",
+        "PostgreSQL",
+        "Grafana",
+        "Redis",
+        "MVC",
+        "Shell",
+        "API",
+        "Data Structures and Algorithms",
+        "Object-Oriented Programming",
+        "gRPC",
+        "OpenTelemetry",
+        "microservices",
+        "RESTful APIs",
+        "GraphQL",
+        "Docker",
+        "Kubernetes",
+        "AWS",
+        "Azure",
+        "Jira",
+        "Azure Devops"
+      ],
+      "color": "from-purple-500 to-pink-500"
+    },
+    "webDevTools": {
+      "title": "Web Dev Tools",
+      "skills": [
+        "VScode",
+        "Git",
+        "Github",
+        "AWS",
+        "Cloudflare",
+        "Nginx",
+        "GCP",
+        "Kubernetes",
+        "Docker",
+        "Grafana",
+        "Datadog",
+        "Jira",
+        "Azure Devops"
+      ],
+      "color": "from-green-500 to-emerald-500"
+    },
+    "frameworks": {
+      "title": "Frameworks",
+      "skills": ["Express", "Fastify", "Nest.js", "Loopback", "Next.js", "React.js"],
+      "color": "from-orange-500 to-red-500"
+    }
+  },
+  "education": [
+    {
+      "id": "1",
+      "institution": "Guru Gobind Singh Indraprastha University, Delhi",
+      "degree": "Bachelor of Technology in Information Technology",
+      "period": "2018-22",
+      "achievement": "CGPA: 8.7",
+      "color": "from-blue-500 to-purple-500"
+    },
+    {
+      "id": "2",
+      "institution": "Dl Dav Model School, Delhi",
+      "degree": "Central Board of Secondary Education (C.B.S.E)",
+      "period": "2018",
+      "achievement": "Percentage: 70",
+      "color": "from-purple-500 to-pink-500"
+    }
+  ],
+  "interests": "Passionate about building scalable systems, exploring new technologies, and solving complex problems",
+  "blog": {
+    "mediumUrl": "https://medium.com/@sparmeet162000",
+    "enabled": true,
+    "maxPosts": 6
+  }
+}
+
